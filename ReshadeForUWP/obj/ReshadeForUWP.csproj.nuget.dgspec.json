@@ -1,0 +1,78 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+        "projectName": "ReshadeForUWP",
+        "projectPath": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+        "packagesPath": "C:\\Users\\legen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\legen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/avalonia-ci/api/v2": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Costura.Fody": {
+              "target": "Package",
+              "version": "[3.3.3, )"
+            },
+            "FluentWPF": {
+              "target": "Package",
+              "version": "[0.8.0, )"
+            },
+            "Microsoft.PowerShell.5.ReferenceAssemblies": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.UI.Xaml": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
+            "ModernWpfUI": {
+              "target": "Package",
+              "version": "[0.9.3-preview.201204.0, )"
+            },
+            "SharpZipLib": {
+              "target": "Package",
+              "version": "[1.3.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

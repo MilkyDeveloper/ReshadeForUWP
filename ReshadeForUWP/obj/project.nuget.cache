@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "QEHaJgf1KrS5Jyv3ixJMIiR3gZfKLvTPSX/ArUtCXEwnmNq1sswuU0K0XE5J/UIuxTPDCbz11KMGVFfz1eEw7A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\legen\\.nuget\\packages\\costura.fody\\3.3.3\\costura.fody.3.3.3.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\fluentwpf\\0.8.0\\fluentwpf.0.8.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\fody\\4.0.2\\fody.4.0.2.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\microsoft.powershell.5.referenceassemblies\\1.1.0\\microsoft.powershell.5.referenceassemblies.1.1.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\microsoft.ui.xaml\\2.5.0\\microsoft.ui.xaml.2.5.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\microsoft.windows.sdk.contracts\\10.0.18362.2005\\microsoft.windows.sdk.contracts.10.0.18362.2005.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\modernwpfui\\0.9.3-preview.201204.0\\modernwpfui.0.9.3-preview.201204.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\sharpziplib\\1.3.1\\sharpziplib.1.3.1.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\system.runtime.windowsruntime\\4.6.0\\system.runtime.windowsruntime.4.6.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\system.runtime.windowsruntime.ui.xaml\\4.6.0\\system.runtime.windowsruntime.ui.xaml.4.6.0.nupkg.sha512",
+    "C:\\Users\\legen\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

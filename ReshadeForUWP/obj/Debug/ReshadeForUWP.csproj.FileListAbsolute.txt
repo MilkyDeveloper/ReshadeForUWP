@@ -1,0 +1,17 @@
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\bin\Debug\ReshadeForUWP.exe.config
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\bin\Debug\ReshadeForUWP.exe
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\bin\Debug\ReshadeForUWP.pdb
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\MainWindow.g.cs
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\App.g.cs
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP_MarkupCompile.cache
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP_MarkupCompile.lref
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\App.baml
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\MainWindow.baml
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.g.resources
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.Properties.Resources.resources
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.GenerateResource.cache
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.CoreCompileInputs.cache
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.exe
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.pdb
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csprojAssemblyReference.cache
+C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.Fody.CopyLocal.cache
