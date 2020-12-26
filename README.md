@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/xbox-256.png" height="256" width="256" alt="tangible-logo" align="right" />
+<img src="https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/xbox-256.png" height="192" width="192" alt="Xbox logo" align="right" />
 
 # Reshade for UWP
 
