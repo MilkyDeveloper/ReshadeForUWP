@@ -50,4 +50,4 @@ Well, you might want to scroll down and read the limitations and then post a Git
 
 ## License
 
-Naturally, because Reshade is awesome (and open source!), and given the fact I love the MIT License, that's what I set it too. Just be aware of the work that was put into the making of this project and basic human ethics.
+Naturally, because Reshade is awesome (and open source!), and given the fact I love the MIT License, that's what I set it to. Just be aware of the work that was put into the making of this project and basic human ethics.
