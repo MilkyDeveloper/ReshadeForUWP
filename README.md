@@ -7,7 +7,10 @@ An awesome GUI wrapper that injects Reshade in UWP apps and games. It also suppo
 ## Design
 This took a lot of time :D
 
+Image of Reshade for UWP setup that's using the UWP Acrylic effect (despite being a Win32 WPF app)
 ![Image of Reshade for UWP setup](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/Reshade%20for%20UWP%2012_26_2020%209_18_07%20PM.png)
+
+Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version of Crusader Kings 3 from the automatic setup of this app
 ![Image of the Reshade Oilify effect being applied to the Xbox Game Pass PC version of Crusader Kings 3](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/Crusader%20Kings%20III%2012_26_2020%209_21_55%20PM.png)
 
 ## Installation
