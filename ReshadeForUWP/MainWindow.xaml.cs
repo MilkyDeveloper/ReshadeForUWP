@@ -325,6 +325,7 @@ namespace ReshadeForUWP
                 sw.WriteLine(@"[GENERAL]");
                 sw.WriteLine(@"EffectSearchPaths = .\," + reshadeDir + @"\Shaders");
                 sw.WriteLine(@"TextureSearchPaths = .\," + reshadeDir + @"\Textures");
+                sw.WriteLine(@"CurrentPresetPath = " + reshadeDir + @"\ReshadePreset.ini");
             }
         }
     }
