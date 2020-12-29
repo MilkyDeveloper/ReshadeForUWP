@@ -1637,11 +1637,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+      "projectUniqueName": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
       "projectName": "ReshadeForUWP",
-      "projectPath": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+      "projectPath": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
       "packagesPath": "C:\\Users\\legen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\legen\\source\\repos\\ReshadeForUWP\\ReshadeForUWP\\obj\\",
+      "outputPath": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
@@ -1653,8 +1653,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/avalonia-ci/api/v2": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net472": {
