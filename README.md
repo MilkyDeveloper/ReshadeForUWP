@@ -43,7 +43,7 @@ Well, you might want to scroll down and read the limitations and then post a Git
 
 ## Limitations
 
-* Unity games may not work, but I've only tested Descenders.
+* Unity games may not work, but I've only tested Descenders. **EDIT:** Totally Accurate Battle Simulator works without a hitch.
 * You might have some trouble getting this to work on games that are not on Steam due to the different, weird game engines that games like Minecraft Windows 10 Edition and Forza Horizon 4 may have.
 * Depth buffer isn't tested **yet**. It's for-sure what I'm going to test next after I get some games downloaded to test
 * You tell me in the Github Issues tab!
