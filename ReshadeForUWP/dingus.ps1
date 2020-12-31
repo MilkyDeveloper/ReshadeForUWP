@@ -1,1 +1,0 @@
-foreach($line in (get-appxpackage | findstr ^Name)) { $line.Remove(0,20) }

@@ -33,11 +33,13 @@ namespace ReshadeForUWP
 
         // Variables
         string processName;
-        string uwpPackagesList;
         string uwpFullPackagesList;
         string uwpPackagesFormatted;
         string uwpPackagesFullFormatted;
+        string uwpPackagesList;
         string uwpAppID;
+        string packageFamilyName;
+        string packageFullName;
 
         string homeDir = Environment.ExpandEnvironmentVariables(@"%userprofile%"); // Home Directory of the user
         string reshadeDir = Environment.ExpandEnvironmentVariables(@"%userprofile%\ReshadeInjectUWP"); // Reshade Directory
@@ -65,8 +67,16 @@ namespace ReshadeForUWP
 
             }
 
-            // 
-            var psProcess = Process.Start("powershell", "-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage | findstr ^PackageFamilyName; $formatted=foreach ($uwp in $uwpList) { $uwp.Remove(0, 20) }; $formatted | Out-File C:/Users/$env:UserName/uwpPackageList.txt");
+            if (!File.Exists(reshadeDir + @"\getShortcutTarget.bat"))
+            {
+                using (var client = new WebClient())
+                {
+                    client.DownloadFile("https://gist.githubusercontent.com/MilkyDeveloper/050c6657760b08ffc651c1192768fe3f/raw/4476db13cb79a4b6dad872eb751f64925181d6d4/findShortcutTarget.bat", reshadeDir + @"\getShortcutTarget.bat");
+                }
+
+            }
+
+            var psProcess = Process.Start("powershell", "-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage | findstr ^Name; $formatted=foreach ($uwp in $uwpList) { $uwp.Remove(0, 20) }; $formatted | Out-File C:/Users/$env:UserName/uwpPackageList.txt");
             psProcess.WaitForExit();
 
             // Retrive the packages we filtered from above
@@ -85,38 +95,11 @@ namespace ReshadeForUWP
                     line = reader.ReadLine();
                     if (line != null)
                     {
-                        listbox1.Items.Add(line);
+                        listbox1.Items.Add(line.Replace(".", " "));
                     }
 
                 } while (line != null);
             }
-
-            // Now redo the same stuff except for the PackageFullName
-            psProcess = Process.Start("powershell", "-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage | findstr ^PackageFullName; $formatted=foreach ($uwp in $uwpList) { $uwp.Remove(0, 20) }; $formatted | Out-File C:/Users/$env:UserName/uwpFullPackageList.txt");
-            psProcess.WaitForExit();
-
-            // Retrive the packages we filtered from above
-            uwpFullPackagesList = homeDir + @"\uwpFullPackageList.txt";
-
-            // Now read it
-            IEnumerable<string> uwpFullPackagesLines = File.ReadLines(uwpFullPackagesList);
-            uwpPackagesFullFormatted = (String.Join(Environment.NewLine, uwpFullPackagesLines));
-            //Console.WriteLine(lines);
-
-            using (StringReader reader = new StringReader(uwpPackagesFullFormatted))
-            {
-                string line = string.Empty;
-                do
-                {
-                    line = reader.ReadLine();
-                    if (line != null)
-                    {
-                        listbox2.Items.Add(line);
-                    }
-
-                } while (line != null);
-            }
-
         }
 
         // Interaction Section
@@ -130,13 +113,27 @@ namespace ReshadeForUWP
             this.DragMove();
         }
 
-        private void ConfirmButton_Click(object sender, RoutedEventArgs e)
+        private void doneButton_Click(object sender, RoutedEventArgs e)
         {
+            string psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1.SelectedItem.ToString().Replace(" ", ".")} | findstr ^PackageFamilyName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFamilyName.txt";
+            var psProcess = Process.Start("powershell", psProcessArgs);
+            psProcess.WaitForExit();
 
-            string filePath = @"C:\Program Files\WindowsApps\" + listbox2.SelectedItem.ToString() + @"\appxmanifest.xml";
+            System.IO.StreamReader file = new System.IO.StreamReader(homeDir + @"\uwpPackageFamilyName.txt");
+            string line;
+            while ((line = file.ReadLine()) != null) { packageFamilyName = line; }
+
+            psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1.SelectedItem.ToString().Replace(" ", ".")} | findstr ^PackageFullName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFullName.txt";
+            psProcess = Process.Start("powershell", psProcessArgs);
+            psProcess.WaitForExit();
+
+            file = new System.IO.StreamReader(homeDir + @"\uwpPackageFullName.txt");
+            while ((line = file.ReadLine()) != null) { packageFullName = line; }
+
+            string filePath = @"C:\Program Files\WindowsApps\" + packageFullName + @"\appxmanifest.xml";
             if (!File.Exists(filePath))
             {
-                filePath = @"C:\Program Files\WindowsApps\" + listbox2.SelectedItem.ToString() + @"\AppxManifest.xml";
+                filePath = @"C:\Program Files\WindowsApps\" + packageFullName + @"\AppxManifest.xml";
             }
 
             // Regex search query that's pretty accurate:
@@ -187,7 +184,8 @@ namespace ReshadeForUWP
                                 sw.WriteLine(@"cd %UserProfile%\ReshadeInjectUWP");
                                 // Very hacky solution that finally works :D
                                 // I'm thinking of extracting info from the Xbox Game Pass desktop shortcuts
-                                sw.WriteLine(@"cmd /c powershell -windowstyle hidden -Command Start-Process -filepath inject.exe {0}; Start-Process -filepath explorer.exe shell:appsFolder\{1}!{2}", processName, listbox1.SelectedItem.ToString(), uwpAppID);
+                                // ^^ Actually impossible because Microsoft made it not even readable by scripts...? like tf
+                                sw.WriteLine(@"cmd /c powershell -windowstyle hidden -Command Start-Process -filepath inject.exe {0}; Start-Process -filepath explorer.exe shell:appsFolder\{1}!{2}", processName, packageFamilyName, uwpAppID);
                             }
                         }
                     }

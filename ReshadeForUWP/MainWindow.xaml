@@ -41,7 +41,8 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
 
             <!-- Input Section -->
-            <Button Content="Choose an app to launch" Height="35">
+            <!-- Input Section -->
+            <Button x:Name="chooseAppButton" Content="Choose an app to launch" Height="35">
                 <ui:FlyoutService.Flyout>
                     <ui:Flyout x:Name="Flyout1">
                         <StackPanel>
@@ -50,7 +51,7 @@
                     </ui:Flyout>
                 </ui:FlyoutService.Flyout>
             </Button>
-            
+
             <Button Margin="5" Content="?" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" IsEnabled="False" ToolTipService.ShowOnDisabled="True" ToolTipService.ShowDuration="99999" ToolTipService.BetweenShowDelay="0" Height="35">
                 <Button.ToolTip>
                     <StackPanel>
@@ -76,17 +77,7 @@
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
 
             <!-- Input Section -->
-            <Button Content="Done selecting the app name?" Height="35">
-                <ui:FlyoutService.Flyout>
-                    <ui:Flyout>
-                        <StackPanel>
-                            <TextBlock>Select the app and press Yes.</TextBlock>
-                            <ListBox x:Name="listbox2" Width="350" Height="150" Margin="0,5,0,0"></ListBox>
-                            <Button Click="ConfirmButton_Click" x:Name="ConfirmButton" Margin="0,5,0,0">Yes</Button>
-                        </StackPanel>
-                    </ui:Flyout>
-                </ui:FlyoutService.Flyout>
-            </Button>
+            <Button x:Name="doneButton" Content="Done selecting the app name?" Height="35" Click="doneButton_Click"/>
 
         </StackPanel>
 
