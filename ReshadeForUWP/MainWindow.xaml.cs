@@ -33,9 +33,7 @@ namespace ReshadeForUWP
 
         // Variables
         string processName;
-        string uwpFullPackagesList;
         string uwpPackagesFormatted;
-        string uwpPackagesFullFormatted;
         string uwpPackagesList;
         string uwpAppID;
         string packageFamilyName;
@@ -100,6 +98,10 @@ namespace ReshadeForUWP
 
                 } while (line != null);
             }
+
+            otherDataButton.IsEnabled = false;
+            otherDataButton.ToolTip = "You have to select the package and regenerate the .bat file to access this.";
+
         }
 
         // Interaction Section
@@ -145,7 +147,7 @@ namespace ReshadeForUWP
                 string lineXml;
                 while ((lineXml = r.ReadLine()) != null)
                 {
-                    string regexPattern = @"(Executable=.*?)+\w+";
+                    string regexPattern = @"Executable=""[^""]*";
 
                     Regex rg = new Regex(regexPattern);
                     MatchCollection matchedString = rg.Matches(lineXml);
@@ -153,7 +155,7 @@ namespace ReshadeForUWP
                     if (matchedString.Count != 0)
                     {
 
-                        processName = matchedString[0].ToString().Remove(0, 12) + ".exe";
+                        processName = matchedString[0].ToString().Remove(0, 12);
                         Console.WriteLine(processName);
 
                     }
@@ -191,6 +193,9 @@ namespace ReshadeForUWP
                     }
                 }
             }
+
+            otherDataButton.IsEnabled = true;
+            otherDataButton.ToolTip = null;
         }
 
         void moveFiles(string dirName, string outDir) // Note to self: for outDir always put a backslash at the back
@@ -325,6 +330,14 @@ namespace ReshadeForUWP
                 sw.WriteLine(@"TextureSearchPaths = .\," + reshadeDir + @"\Textures");
                 sw.WriteLine(@"CurrentPresetPath = " + reshadeDir + @"\ReshadePreset.ini");
             }
+        }
+
+        private void otherDataButton_Click(object sender, RoutedEventArgs e)
+        {
+
+            // Now just update the extra info stuff
+            uwpPackageFamilyTextbox.Text = $"{uwpPackageFullTextbox.Text} {packageFamilyName}"; ;
+            uwpPackageFullTextbox.Text = $"{uwpPackageFullTextbox.Text} {packageFullName}";
         }
     }
 }

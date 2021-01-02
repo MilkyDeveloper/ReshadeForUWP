@@ -82,14 +82,34 @@
         </StackPanel>
 
         <!-- Stackpanel for the ProcessName section -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,50">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="261,0,259.6,40">
 
             <!-- Input Section -->
-            <Button Content="Generate Reshade.ini" Height="35" Click="generateReshadeINI">
+            <Button Content="Generate Reshade.ini" Height="35" Click="generateReshadeINI" Margin="10">
                 <ui:FlyoutService.Flyout>
                     <ui:Flyout>
                         <StackPanel>
                             <TextBlock x:Name="generateReshadeIniProgress" Margin="0,0,0,0">Done!</TextBlock>
+                        </StackPanel>
+                    </ui:Flyout>
+                </ui:FlyoutService.Flyout>
+            </Button>
+            
+            <Button x:Name="otherDataButton" Content="Other Data" Height="35" Margin="10" Click="otherDataButton_Click">
+                <ui:FlyoutService.Flyout>
+                    <ui:Flyout>
+                        <StackPanel Orientation="Horizontal" Width="1000">
+                            <StackPanel Orientation="Vertical">
+                                <TextBox x:Name="uwpPackageFamilyTextbox" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap">UWP Package Family Name:</TextBox>
+                                <TextBox x:Name="uwpPackageFullTextbox" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap">UWP Package Full Name:</TextBox>
+                                <TextBox x:Name="uwpPackageDirectoryTextbox" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap">UWP Package Directory Location:</TextBox>
+                                <TextBox x:Name="appxManifestLocationTextbox" Background="Transparent" BorderThickness="0" IsReadOnly="True" TextWrapping="Wrap">AppxManifest.xml location:</TextBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Margin="10">UWP Package Full Name: </TextBlock>
+                                <TextBlock Margin="10">UWP Package Directory Name: </TextBlock>
+                                <TextBlock Margin="10">Appxmanifest location: </TextBlock>
+                            </StackPanel>
                         </StackPanel>
                     </ui:Flyout>
                 </ui:FlyoutService.Flyout>
