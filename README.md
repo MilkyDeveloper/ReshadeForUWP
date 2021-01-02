@@ -20,11 +20,9 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 ### Most UWP apps
 
-Most UWP apps are standalone and don't have a launcher. For these apps, just press the ```Choose an app to launch``` button and choose your UWP app. Remember that the list is composed of the "system" UWP app names, so they have a format of:
+Most UWP apps are standalone and don't have a launcher. For these apps, just press the ```Choose an app to launch``` button and choose your UWP app. Some games may have cryptic names but this is near the best possible due to Microsoft's lackluster APIs for managing UWP Apps (except for Powershell).
 
-> publisher.appname_version/architecture/other
-
-Once you've chose the app just press ```Done selecting the app name?``` and select it again (why? tldr; it takes two different application names to launch the app and locate the directory of it). Once that's done, press ```Yes``` and then save the ```.bat``` file in whatever directory you would like too use. To launch it double-click the bat file and the game will be launched with Reshade injected. However, Reshade doesn't know where all of it's files, shader files (```.fx```) and textures are located, so clicking ```Generate Reshade.ini``` should   download all of these files, extract them, and configure the ```Reshade.ini```. Congratulations, you've configured a working Reshade install for a UWP game!
+Once you've chose the app just press ```Done selecting the app name?``` and save the ```.bat``` file in whatever directory you would like too use. To launch it double-click the bat file and the game will be launched with Reshade injected. However, Reshade doesn't know where all of it's files, shader files (```.fx```) and textures are located, so clicking ```Generate Reshade.ini``` should download all of these files, extract them, and configure the ```Reshade.ini```. Congratulations, you've configured a working Reshade install for a UWP game!
 
 ### Still not working?
 
