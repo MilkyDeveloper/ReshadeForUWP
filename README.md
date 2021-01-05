@@ -18,26 +18,7 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 ## Usage
 
-### Most UWP apps
-
-Most UWP apps are standalone and don't have a launcher. For these apps, just press the ```Choose an app to launch``` button and choose your UWP app. Some games may have cryptic names but this is near the best possible due to Microsoft's lackluster APIs for managing UWP Apps (except for Powershell).
-
-Once you've chose the app just press ```Done selecting the app name?``` and save the ```.bat``` file in whatever directory you would like too use. To launch it double-click the bat file and the game will be launched with Reshade injected. However, Reshade doesn't know where all of it's files, shader files (```.fx```) and textures are located, so clicking ```Generate Reshade.ini``` should download all of these files, extract them, and configure the ```Reshade.ini```. Congratulations, you've configured a working Reshade install for a UWP game!
-
-### Still not working?
-
-Chances are you're app has a custom launcher. The manifest of the app tells it to launch one program that in turn launches *the actual game*, and this messes with the auto-detection of the exe name to inject.
-
-Fill in the ```Auto (...)``` textbox on the top of the app using the instructions accessible by hovering your mouse over the question mark at the right. The basic rundown is:
-
-> 1. Go to the task manager's Details tab
-> 2. Scroll through and find your game's process name. Naturally, this is quite hard, so in most apps you can go to the main Processes tab of the Task Manager and right click on the main entry of your game (or expand the dropdown and find the nested processes if that doesn't work) and select Go to details. Note the text under the Name collumn.
-> 3. Put that **exact** process name in the textbox. Note that this is **case-sensitive**, meaning you must preserve any capital characters. Additionaly, don't omit the **.exe** from the end of your process name. For example, Doom Eternal's process name is ```DOOMEternalx64vk.exe``` and typing ```Doometernal64VK``` in the textbox wouldn't work.
-> 4. Follow the instructions from the **Most UWP apps** subheading above.
-
-### I still don't get Reshade on my screen!
-
-Well, you might want to scroll down and read the limitations and then post a Github Issue.
+[![Fuselage tutorial video](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png)](https://youtu.be/DfN5sefhQj8)
 
 ## Limitations
 
