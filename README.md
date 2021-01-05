@@ -18,7 +18,7 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 ## Usage
 
-[![Fuselage tutorial video][https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png]][https://youtu.be/DfN5sefhQj8]
+![Fuselage tutorial video][https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png]][https://youtu.be/DfN5sefhQj8]
 
 ## Limitations
 
