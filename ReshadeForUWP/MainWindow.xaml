@@ -7,6 +7,7 @@
         xmlns:local="clr-namespace:ReshadeForUWP" xmlns:ui="http://schemas.modernwpf.com/2019"
                   mc:Ignorable="d"
         Title="Reshade for UWP" Height="450" Width="800">
+    
     <Grid>
 
         <!-- Reshade UWP Title -->
@@ -15,34 +16,10 @@
         <!-- Stackpanel for the ProcessName section -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,100,0,0">
 
-            <TextBox x:Name="ProcessNameTextbox" Height="35">Auto (Hover your mouse over the question mark on the left if your game isn't working)</TextBox>
-            <Button Margin="5" Content="?" VerticalAlignment="Center" FontWeight="Bold" FontSize="16" IsEnabled="False" ToolTipService.ShowOnDisabled="True" ToolTipService.ShowDuration="99999" ToolTipService.BetweenShowDelay="0" Height="35">
-                <Button.ToolTip>
-                    <StackPanel>
-                        <TextBlock FontWeight="Bold" FontSize="14" Margin="0,0,0,5">Finding your app name</TextBlock>
-                        <TextBlock>
-                        1. Launch your game and open the Task Manager's Details tab
-                        <LineBreak />
-                        2. Scroll down to your game's name
-                        <LineBreak />
-                        3. Put the name (case-sensitive!) in the box to the right
-                        </TextBlock>
-                        <Border BorderBrush="Silver" BorderThickness="0,1,0,0" Margin="0,8" />
-                        <WrapPanel>
-                            <TextBlock TextWrapping="Wrap" FontStyle="Italic">Tip: You can press any random entry in the Details and then type in the first character of your game's name and then it will jump to the process names starting with that letter. E.g. You can press "D" for Doom Eternal and it will jump there.</TextBlock>
-                        </WrapPanel>
-                    </StackPanel>
-                </Button.ToolTip>
-            </Button>
-
-        </StackPanel>
-
-        <!-- Stackpanel for the ProcessName section -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
+            <TextBlock VerticalAlignment="Center" Margin="10" FontFamily="Global User Interface">Step 1.</TextBlock>
 
             <!-- Input Section -->
-            <!-- Input Section -->
-            <Button x:Name="chooseAppButton" Content="Choose an app to launch" Height="35">
+            <Button x:Name="chooseAppButton" Content="Choose a game to launch" Height="35">
                 <ui:FlyoutService.Flyout>
                     <ui:Flyout x:Name="Flyout1">
                         <StackPanel>
@@ -74,10 +51,21 @@
         </StackPanel>
 
         <!-- Stackpanel for the ProcessName section -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,0,0">
 
-            <!-- Input Section -->
-            <Button x:Name="doneButton" Content="Done selecting the app name?" Height="35" Click="doneButton_Click"/>
+            <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">Step 2.</TextBlock>
+
+            <Button x:Name="chooseprocessNameButton" Content="Launch your game from the start menu and then press this button" Height="35" Click="chooseprocessNameButton_Click">
+                <ui:FlyoutService.Flyout>
+                    <ui:Flyout>
+                        <StackPanel>
+                            <TextBlock>Launch your game and select the name of it in the list below.</TextBlock>
+                            <ListBox x:Name="listbox3" Width="450" Height="250" Margin="0,10,0,0"></ListBox>
+                            <Button Margin="0,10" x:Name="doneButton" Content="Done filling out everything?" Height="35" Click="doneButton_Click"/>
+                        </StackPanel>
+                    </ui:Flyout>
+                </ui:FlyoutService.Flyout>
+            </Button>
 
         </StackPanel>
 

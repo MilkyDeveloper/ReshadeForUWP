@@ -42,6 +42,8 @@ namespace ReshadeForUWP
         string homeDir = Environment.ExpandEnvironmentVariables(@"%userprofile%"); // Home Directory of the user
         string reshadeDir = Environment.ExpandEnvironmentVariables(@"%userprofile%\ReshadeInjectUWP"); // Reshade Directory
 
+        Process[] allProcesses;
+
         public MainWindow() {
 
             // 👇 Why do you exist?
@@ -52,7 +54,7 @@ namespace ReshadeForUWP
             //uwpPackageList = ps.Invoke();
 
             // Extract our inject.exe file to C:\Users\*user*\ReshadeInjectUWP\inject.exe
-            
+
             if (!File.Exists(reshadeDir + @"\inject.exe"))
             {
                 Directory.CreateDirectory(reshadeDir);
@@ -74,7 +76,7 @@ namespace ReshadeForUWP
 
             }
 
-            var psProcess = Process.Start("powershell", "-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage | findstr ^Name; $formatted=foreach ($uwp in $uwpList) { $uwp.Remove(0, 20) }; $formatted | Out-File C:/Users/$env:UserName/uwpPackageList.txt");
+            var psProcess = Process.Start("powershell", "-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main | findstr ^Name; $formatted=foreach ($uwp in $uwpList) { $uwp.Remove(0, 20) + ' : ' + (Get-AppxPackage -Name $uwp.Remove(0, 20) | Get-AppxPackageManifest).package.applications.application.VisualElements.DisplayName.Replace('ms-resource:', '').Replace(' : AppName', '') }; $formatted | Out-File C:/Users/$env:UserName/uwpPackageList.txt");
             psProcess.WaitForExit();
 
             // Retrive the packages we filtered from above
@@ -93,7 +95,11 @@ namespace ReshadeForUWP
                     line = reader.ReadLine();
                     if (line != null)
                     {
-                        listbox1.Items.Add(line.Replace(".", " "));
+                        if (line.Contains("Microsoft.Xbox") || line.Contains("Microsoft.Windows") || line.Contains("Windows"))
+                        {} else
+                        {
+                            listbox1.Items.Add(line.Replace(".", " "));
+                        }
                     }
 
                 } while (line != null);
@@ -115,9 +121,34 @@ namespace ReshadeForUWP
             this.DragMove();
         }
 
+        private void chooseprocessNameButton_Click(object sender, RoutedEventArgs e)
+        {
+            listbox3.Items.Clear();
+            allProcesses = Process.GetProcesses();
+
+            foreach (Process x in allProcesses)
+            {
+                if (x.MainWindowTitle != "") {
+                    listbox3.Items.Add(x.MainWindowTitle + " : " + x.ProcessName + ".exe");
+                }
+            }
+        }
+
         private void doneButton_Click(object sender, RoutedEventArgs e)
         {
-            string psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1.SelectedItem.ToString().Replace(" ", ".")} | findstr ^PackageFamilyName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFamilyName.txt";
+            foreach (Process x in allProcesses)
+            {
+                string mainWindowTitle = listbox3.SelectedItem.ToString();
+                if (x.MainWindowTitle == mainWindowTitle)
+                {
+                    processName = x.ProcessName;
+                }
+            }
+
+            string listbox1SelectedItem = listbox1.SelectedItem.ToString().Substring(0, listbox1.SelectedItem.ToString().LastIndexOf(":") + 1).Replace(" :", "").Replace(" ", ".").Trim();
+            Console.WriteLine(listbox1SelectedItem);
+
+            string psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1SelectedItem} | findstr ^PackageFamilyName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFamilyName.txt";
             var psProcess = Process.Start("powershell", psProcessArgs);
             psProcess.WaitForExit();
 
@@ -125,7 +156,7 @@ namespace ReshadeForUWP
             string line;
             while ((line = file.ReadLine()) != null) { packageFamilyName = line; }
 
-            psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1.SelectedItem.ToString().Replace(" ", ".")} | findstr ^PackageFullName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFullName.txt";
+            psProcessArgs = $@"-windowstyle hidden -ExecutionPolicy Unrestricted -Command $uwpList = get-appxpackage -PackageTypeFilter Main -Name {listbox1SelectedItem} | findstr ^PackageFullName; $formatted=foreach ($uwp in $uwpList) {{ $uwp.Remove(0, 20) }}; $formatted | Out-File C:/Users/$env:UserName/uwpPackageFullName.txt";
             psProcess = Process.Start("powershell", psProcessArgs);
             psProcess.WaitForExit();
 
@@ -144,22 +175,11 @@ namespace ReshadeForUWP
             Console.WriteLine(filePath);
             using (StreamReader r = new StreamReader(filePath))
             {
+                processName = listbox3.SelectedItem.ToString().Substring(listbox3.SelectedItem.ToString().IndexOf(":")).Replace(": ", "");
+
                 string lineXml;
                 while ((lineXml = r.ReadLine()) != null)
                 {
-                    string regexPattern = @"Executable=""[^""]*";
-
-                    Regex rg = new Regex(regexPattern);
-                    MatchCollection matchedString = rg.Matches(lineXml);
-
-                    if (matchedString.Count != 0)
-                    {
-
-                        processName = matchedString[0].ToString().Remove(0, 12);
-                        Console.WriteLine(processName);
-
-                    }
-
                     String regexPatternx = @"(Application Id=.*?)+\w+";
 
                     Regex rgx = new Regex(regexPatternx);
@@ -182,7 +202,6 @@ namespace ReshadeForUWP
                             // Create a new file     
                             using (StreamWriter sw = File.CreateText(saveFileDialog.FileName))
                             {
-                                if (!ProcessNameTextbox.Text.Contains("Auto")) { processName = ProcessNameTextbox.Text; }
                                 sw.WriteLine(@"cd %UserProfile%\ReshadeInjectUWP");
                                 // Very hacky solution that finally works :D
                                 // I'm thinking of extracting info from the Xbox Game Pass desktop shortcuts
