@@ -95,7 +95,7 @@ namespace ReshadeForUWP
                     line = reader.ReadLine();
                     if (line != null)
                     {
-                        if (line.Contains("Microsoft.Xbox") || line.Contains("Microsoft.Windows") || line.Contains("Windows"))
+                        if (line.Contains("Microsoft.Xbox") || line.Contains("Microsoft.Windows"))
                         {} else
                         {
                             listbox1.Items.Add(line.Replace(".", " "));
