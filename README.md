@@ -4,7 +4,7 @@
 
 An awesome GUI wrapper that injects Reshade in UWP apps and games. It also supports Xbox Game Pass PC and Microsoft Store games.
 
-## Installation
+<h2 align="center">Installation</h2>
 
 Just go to the [releases page](https://github.com/MilkyDeveloper/ReshadeForUWP/releases/) to install Reshade for UWP. It's a portable/bundled exe so there's no setup required whatsoever!
 
