@@ -12,7 +12,7 @@ Just go to the [releases page](https://github.com/MilkyDeveloper/ReshadeForUWP/r
 
 ![Image of Reshade for UWP setup](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/Reshade%20for%20UWP%2012_26_2020%209_18_07%20PM.png)
 
-<div align="center">Image of Reshade for UWP setup that's using the UWP Acrylic effect (despite being a Win32 WPF app)</div>
+<div align="center">Image of Reshade for UWP setup that's using the UWP Acrylic effect (despite being a Win32 WPF app)</div>  
 
 ![Image of the Reshade Oilify effect being applied to the Xbox Game Pass PC version of Crusader Kings 3](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/Crusader%20Kings%20III%2012_26_2020%209_21_55%20PM.png)
 
