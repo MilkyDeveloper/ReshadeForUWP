@@ -1,6 +1,7 @@
 <img src="https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/xbox-256.png" height="192" width="192" alt="Xbox logo" align="right" />
 
 # Reshade for UWP
+![Badge of how many times this project has been downloaded](https://shields.io/github/downloads/MilkyDeveloper/ReshadeForUWP/total)
 
 An awesome GUI wrapper that injects Reshade in UWP apps and games. It also supports Xbox Game Pass PC and Microsoft Store games.
 
