@@ -4,7 +4,7 @@
 ![Badge of how many times this project has been downloaded](https://shields.io/github/downloads/MilkyDeveloper/ReshadeForUWP/total)
 ![Actively Maintained](https://img.shields.io/badge/Maintenance%20Level-Actively%20Maintained-green.svg)
 
-An awesome GUI wrapper that injects Reshade in UWP apps and games. It also supports Xbox Game Pass PC and Microsoft Store games. *Note: Despite the edit dates, this project is still **maintained**, just not actively developed because I feel content with the current state of the software. If bugs and feature requests arise, I'll implement them.
+An awesome GUI wrapper that injects Reshade in UWP apps and games. It also supports Xbox Game Pass PC and Microsoft Store games. *Note: Despite the edit dates, this project is still **maintained**, just not actively developed because I feel content with the current state of the software. If bugs and feature requests arise, I'll implement them.*
 
 ## Installation
 
