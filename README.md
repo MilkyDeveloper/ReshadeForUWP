@@ -10,6 +10,10 @@ An awesome GUI wrapper that injects Reshade in UWP apps and games. It also suppo
 
 Just go to the [releases page](https://github.com/MilkyDeveloper/ReshadeForUWP/releases/) to install Reshade for UWP. It's a portable/bundled exe so there's no setup required whatsoever!
 
+### EA Play
+
+For the new Xbox Game Pass EA Play integration, all you need to do is use Reshade normally. These games are not UWP, and the "*EA Play for Game Pass*" game entries are just a frontend for the EA Play Desktop program.
+
 ## Design
 
 ![Image of Reshade for UWP setup](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/Reshade%20for%20UWP%2012_26_2020%209_18_07%20PM.png)
