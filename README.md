@@ -30,7 +30,7 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 * You might have some trouble getting this to work on games that are not on Steam due to the different, weird game engines that games like Minecraft Windows 10 Edition and Forza Horizon 4 may have.
 > **Flight Sim 2020, Forza games, and Minecraft Windows 10 Edition (Dungeons will work because it's using Unreal Engine 4) are known not to work due to this.**
-* Depth buffer isn't tested **yet**. It's for-sure what I'm going to test next after I get some games downloaded to test
+* Depth buffer isn't tested **yet**. It's for-sure what I'm going to test next after I get some games downloaded to test.
 * You tell me in the Github Issues tab!
 
 ## License
