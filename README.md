@@ -24,7 +24,20 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 ## Usage
 
-[![Fuselage tutorial video](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png)](https://youtu.be/DfN5sefhQj8)
+Instructions [by this wonderful user](https://forums.flightsimulator.com/t/installing-reshade-on-ms-store-version-of-the-msfs2020-via-reshadeforuwp-program-by-milkydeveloper/411855) for Flight Sim 2020, these should work for any other game:
+1. Run “ReshadeForUWP” as administrator. Then wait a little and the main window of the “ReshadeForUWP” program will appear. (The window may not appear quickly, that’s okay).
+2. Click the “Choose a game to launch” button in the program window. A list will open. Find the “Microsoft FlightSimulator: AppName” item in the list. The item should be highlighted in blue when you click on it. Then, click on an empty area of the program window to close the list. (After these actions, the name of the simulator will not appear on the “Choose a game to launch” button. It will look as if you didn’t choose anything. Don’t worry about it.) Now you don’t have to close the “ReshadeForUWP” program until the 6th step of this manual.
+3. Run the MSFS2020 in the usual way without administrator rights while “ReshadeForUWP” working in the background. Wait until the simulator is fully launched (for the main menu to appear). Now the simulator cannot be closed until the 7th step of this manual.
+4. Switch to the “ReshadeForUWP” window with using the “Alt + Tab” key combination while MSFS2020 working in the background. Click the “Launch your game from the start menu and then press this button” in the program window. Select the “Microsoft Flight Simulator - 1.17.3.0: FlightSimulator.exe” item in the list that opens. (The numbers in the item may differ as it indicate the current version of the simulator.) The item will turn blue. Click the “Done filling out everything” button that is in the same list. After that, a window will appear to save the “bat” file. (You will run the simulator from this “bat” file after completing all the steps.) Save this file to your Desktop. Then, you will return to the main window of the “ReshadeForUWP” program.
+5. Click the “Generate Reshade.ini” button. Wait a little. The program automatically downloads and installs ReShade along with the shader packs at this moment. A small message “Done!” will appear when the installation is complete.
+6. Now close the “ReshadeForUWP” program.
+7. Return to the MSFS2020 window using the “Alt+Tab” keyboard shortcut, and then close the simulator in the usual way.
+8. Wait a little and then restart your computer.
+9. Run the “bat” file on the Desktop with a regular double-click without administrator rights. Important! You will only need to run the simulator this way once. Watch to see if the ReShade appears during the MSFS2020 launch. (In particular, watch to see horizontal bar of ReShade’s interface during the simulator launch.) Press the Home button when the simulator is fully loaded. Then the ReShade window should appear. Click “Skip tutorial” in it and click “Home” again to close the ReShade window. Then, exit the simulator in the usual way. (Also, just exit the MSFS2020 in the usual way, even if ReShade doesn’t appear during this run of the simulator at all.)
+10. Wait a little and then restart your computer.
+11. Run the “bat” file on your Desktop as administrator. Run the “bat” file with administrator rights is very important to correct work of the ReShade! Now you will need to do this every time to run the simulator.
+
+[![ReshadeForUWP tutorial video](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png)](https://youtu.be/DfN5sefhQj8)
 
 ## Limitations
 
