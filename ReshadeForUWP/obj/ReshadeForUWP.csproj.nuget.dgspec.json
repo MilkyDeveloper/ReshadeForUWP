@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {}
+    "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {
+    "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+        "projectUniqueName": "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
         "projectName": "ReshadeForUWP",
-        "projectPath": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+        "projectPath": "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
         "packagesPath": "C:\\Users\\legen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\obj\\",
+        "outputPath": "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\legen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

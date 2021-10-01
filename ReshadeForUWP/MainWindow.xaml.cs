@@ -62,7 +62,7 @@ namespace ReshadeForUWP
                 using (var client = new WebClient())
                 {
                     client.DownloadFile("https://reshade.me/downloads/inject64.exe", reshadeDir + @"\inject.exe");
-                    client.DownloadFile("https://github.com/MilkyDeveloper/dump/releases/download/%E2%99%BE/ReShade64.dll", reshadeDir + @"\Reshade64.dll");
+                    client.DownloadFile("https://github.com/MilkyDeveloper/ReshadeForUWP/releases/download/2.2/unrestrictedDepthBuffer.dll", reshadeDir + @"\Reshade64.dll");
                 }
 
             }
@@ -238,7 +238,7 @@ namespace ReshadeForUWP
 
             foreach (DirectoryInfo dirx in dirs)
             {
-                // you can delete file here if you want (destination file)
+                // you can delete the file here if you want (destination file)
                 if (File.Exists(outDir + dirx.Name))
                 {
                     File.Delete(outDir + dirx.Name);
@@ -289,7 +289,6 @@ namespace ReshadeForUWP
                 client.DownloadFile("https://github.com/LordOfLunacy/Insane-Shaders/archive/master.zip", reshadeDir + @"\insane.zip");
                 client.DownloadFile("https://github.com/luluco250/FXShaders/archive/master.zip", reshadeDir + @"\fxshaders.zip");
                 client.DownloadFile("https://github.com/originalnicodr/CorgiFX/archive/master.zip", reshadeDir + @"\corgifx.zip");
-                client.DownloadFile("https://github.com/Radegast-FFXIV/reshade-shaders/archive/master.zip", reshadeDir + @"\radegast.zip");
             }
 
             removeFiles(reshadeDir + @"\Shaders");
@@ -338,9 +337,12 @@ namespace ReshadeForUWP
 
             moveFiles(reshadeDir + @"\FXShaders-master\Shaders", reshadeDir + @"\Shaders\");
             moveFiles(reshadeDir + @"\FXShaders-master\Textures", reshadeDir + @"\Textures\");
+            moveFiles(reshadeDir + @"\Shaders\FXShaders\FXShaders", reshadeDir + @"\Shaders\FXShaders\");
 
             moveFiles(reshadeDir + @"\CorgiFX-master\Shaders", reshadeDir + @"\Shaders\");
             moveFiles(reshadeDir + @"\CorgiFX-master\Textures", reshadeDir + @"\Textures\");
+
+            File.Delete(reshadeDir + @"\Shaders\Pong.fx");
 
             using (StreamWriter sw = new StreamWriter(reshadeDir + @"\ReShade.ini"))
             {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O7cIO7B4ELiAJswGj3OgYDB3x+YHTVFFe5ZxV28CHyK65M4Y+hxt8yR5wM2gyN1x+lr9+fthGZRAzWOAKcvasQ==",
+  "dgSpecHash": "2DvzInvGeFqi8WUMyZ/dr6edgmhDjQt8bcIGuMPMegGpYEQpBzgfazcTwOfBLUPD0GH9Uka970cjwz4o69OJ5Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\legen\\Documents\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
+  "projectFilePath": "C:\\Users\\legen\\Source\\Repos\\ReshadeForUWP\\ReshadeForUWP\\ReshadeForUWP.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legen\\.nuget\\packages\\costura.fody\\3.3.3\\costura.fody.3.3.3.nupkg.sha512",
     "C:\\Users\\legen\\.nuget\\packages\\fluentwpf\\0.8.0\\fluentwpf.0.8.0.nupkg.sha512",

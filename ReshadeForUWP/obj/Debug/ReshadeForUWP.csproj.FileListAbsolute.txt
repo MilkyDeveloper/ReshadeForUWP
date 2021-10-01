@@ -13,7 +13,6 @@ C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.
 C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.CoreCompileInputs.cache
 C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.exe
 C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.pdb
-C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csprojAssemblyReference.cache
 C:\Users\legen\source\repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.Fody.CopyLocal.cache
 C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\bin\Debug\ReshadeForUWP.exe.config
 C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\bin\Debug\ReshadeForUWP.exe
@@ -32,3 +31,4 @@ C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csp
 C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.Fody.CopyLocal.cache
 C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.exe
 C:\Users\legen\Documents\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.pdb
+C:\Users\legen\Source\Repos\ReshadeForUWP\ReshadeForUWP\obj\Debug\ReshadeForUWP.csproj.AssemblyReference.cache
