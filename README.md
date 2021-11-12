@@ -25,6 +25,11 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 
 ## Usage
 
+### Video Guide
+<img src="https://img.youtube.com/vi/FWi90iZJZW8/0.jpg" href="https://youtu.be/FWi90iZJZW8?t=300"></img>
+
+### Text Instructions
+
 Instructions [by this wonderful user](https://forums.flightsimulator.com/t/installing-reshade-on-ms-store-version-of-the-msfs2020-via-reshadeforuwp-program-by-milkydeveloper/411855) for Flight Sim 2020, these should work for any other game:
 1. Run “ReshadeForUWP” as administrator. Then wait a little and the main window of the “ReshadeForUWP” program will appear. (The window may not appear quickly, that’s okay).
 2. Click the “Choose a game to launch” button in the program window. A list will open. Find the “Microsoft FlightSimulator: AppName” item in the list. The item should be highlighted in blue when you click on it. Then, click on an empty area of the program window to close the list. (After these actions, the name of the simulator will not appear on the “Choose a game to launch” button. It will look as if you didn’t choose anything. Don’t worry about it.) Now you don’t have to close the “ReshadeForUWP” program until the 6th step of this manual.
@@ -37,6 +42,8 @@ Instructions [by this wonderful user](https://forums.flightsimulator.com/t/insta
 9. Run the “bat” file on the Desktop with a regular double-click without administrator rights. Important! You will only need to run the simulator this way once. Watch to see if the ReShade appears during the MSFS2020 launch. (In particular, watch to see horizontal bar of ReShade’s interface during the simulator launch.) Press the Home button when the simulator is fully loaded. Then the ReShade window should appear. Click “Skip tutorial” in it and click “Home” again to close the ReShade window. Then, exit the simulator in the usual way. (Also, just exit the MSFS2020 in the usual way, even if ReShade doesn’t appear during this run of the simulator at all.)
 10. Wait a little and then restart your computer.
 11. Run the “bat” file on your Desktop as administrator. Run the “bat” file with administrator rights is very important to correct work of the ReShade! Now you will need to do this every time to run the simulator.
+
+### Old Video
 
 [![ReshadeForUWP tutorial video](https://raw.githubusercontent.com/MilkyDeveloper/dump/%F0%9F%96%BC/youtube-clickbait%F0%9F%98%B2%F0%9F%98%B2%F0%9F%98%B2.png)](https://youtu.be/DfN5sefhQj8)
 
