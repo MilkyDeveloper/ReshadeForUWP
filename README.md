@@ -26,7 +26,7 @@ Image of Reshade's Oilify effect being applied to the Xbox Game Pass PC version 
 ## Usage
 
 ### Video Guide
-<img src="https://img.youtube.com/vi/FWi90iZJZW8/0.jpg" href="https://youtu.be/FWi90iZJZW8?t=300"></img>
+<a href="https://youtu.be/FWi90iZJZW8?t=300"><img src="https://img.youtube.com/vi/FWi90iZJZW8/0.jpg"></img></a>
 
 ### Text Instructions
 
